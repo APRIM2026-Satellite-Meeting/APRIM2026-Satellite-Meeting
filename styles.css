@@ -314,6 +314,18 @@ a:hover {
   box-shadow: 0 24px 60px rgba(20, 26, 45, 0.16);
 }
 
+.detail-hero {
+  position: relative;
+  overflow: hidden;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 42px 38px;
+  color: #ffffff;
+  box-shadow: 0 24px 60px rgba(20, 26, 45, 0.16);
+}
+
 .detail-hero::before {
   content: "";
   position: absolute;
