@@ -605,53 +605,106 @@ a:hover {
   gap: 18px;
 }
 
-.speaker-card {
+.speaker-grid {
   display: grid;
-  grid-template-columns: 170px 1fr;
-  gap: 22px;
-  align-items: start;
-  background: #fbfcfe;
-  border: 1px solid #e4e8f0;
-  border-radius: 22px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 28px;
 }
 
-.speaker-photo-wrap {
-  position: relative;
+.speaker-card {
+  background: #fff;
+  border: 1px solid #e6e8ee;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
 .speaker-photo {
-  width: 170px;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f3f4f6;
+  margin-bottom: 14px;
+}
+
+.speaker-photo img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid #d8e0ec;
-  background: #eef3f9;
+  display: block;
 }
 
-.speaker-badge {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  background: rgba(15, 27, 50, 0.88);
-  color: #ffffff;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 0.78rem;
+.speaker-meta {
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 8px;
 }
 
-.speaker-info h3 {
-  margin: 0 0 8px;
-  font-size: 1.35rem;
-}
-
-.speaker-role {
+.speaker-card h3 {
   margin: 0 0 10px;
-  color: #52617d;
-  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.3;
 }
 
+.speaker-affiliation,
+.speaker-role,
+.speaker-bio {
+  margin: 0 0 8px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.committee-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.committee-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.committee-item img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.committee-role {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.committee-item h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.committee-item p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.6;
+}
 .organizer-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
